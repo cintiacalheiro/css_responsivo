@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: normal;
+    line-height: 1.2rem;
     background-color: #c6e8d1;
     color: #09560e;
 }
@@ -25,16 +25,14 @@ header h1 {
 }
 
 header nav li {
-    display: inline;
-    margin-left: 1000px;
-    font-size: 30px;
-    justify-content: space-between;
+    font-size: 2rem;
+    display: flex;
+    float: left;
 }
 
 header nav li a {
     color:#ecf0f1;
     text-decoration: none;
-    justify-content: space-between;
 }
 
 .container {
