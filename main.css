@@ -6,19 +6,19 @@
 }
 
 body {
-    line-height: 32PX;
+    line-height: 16PX;
     background-color: #c6e8d1;
 }
 
 header {
     background-color: #a6e07c;
     padding: 20px 0;
-    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
+    width: 60%;
     color: #333;
 }
 
@@ -35,9 +35,19 @@ header nav li a {
 }
 
 .container {
-    max-width: 1280px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 1%;
+    max-width: 1280vw;
+    width: 100vw;
     margin: 0 auto;
+    row-gap: 5%;
+}
+
+.container-produtos {
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;  
+    column-gap: 1%;
 }
 
 header .container,
@@ -75,9 +85,10 @@ section img {
 }
 
 section p {
-    font-size: 1rem;
+    font-size: 16px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 section button {
@@ -91,4 +102,33 @@ section button {
 
 section button:hover {
     background-color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px 0;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    nav ul li {
+        margin-right: 10px;
+    }
+    .container-produtos {
+        width: 100%;
+    }
+
+    .section {
+        grid-template-columns: repeat(2,49%);
+    }
+
+    .section button {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .section button {
+        display: none;
+    }
 }
